@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.po.Admin" table="admin" schema="book">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="apassword">
+            <column name="apassword" sql-type="varchar(80)" length="80"/>
+        </property>
+        <property name="ausername">
+            <column name="ausername" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="pic">
+            <column name="pic" sql-type="blob" not-null="true"/>
+        </property>
+        <property name="picPath">
+            <column name="picPath" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="pageNum">
+            <column name="pageNum" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

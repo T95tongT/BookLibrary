@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.po.Borrowbook" table="borrowbook" schema="book">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="borrowid">
+            <column name="borrowid" sql-type="int(11)"/>
+        </property>
+        <property name="bookname">
+            <column name="bookname" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="date"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="writer">
+            <column name="writer" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="publish">
+            <column name="publish" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="num">
+            <column name="num" sql-type="int(11)"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
